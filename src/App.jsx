@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+﻿import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ReceptionProvider } from './context/ReceptionContext';
 import MainLayout from './layout/MainLayout';
 import Dashboard from './pages/Dashboard';
@@ -29,7 +29,7 @@ import WardRequests from './pages/WardRequests';
 const isAuthenticated = () => localStorage.getItem('isLoggedIn') === 'true';
 const ProtectedRoute = ({ children }) => {
   if (!isAuthenticated()) {
-    window.location.href = 'http://localhost:5173/login';
+    window.location.href = '/login';
     return null;
   }
   return children;
