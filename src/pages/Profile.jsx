@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { User as UserIcon, Building2, Clock, LogOut, Edit2, Save, X, Phone, Mail, Calendar } from 'lucide-react';
 import Topbar from '../layout/Topbar';
 import ConfirmDialog from '../components/ConfirmDialog';
@@ -67,7 +67,7 @@ export default function Profile() {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     localStorage.removeItem('isLoggedIn');
-    window.location.href = 'http://localhost:5173/login';
+    window.location.href = '/login';
   };
 
   if (loading) return <div className="min-h-screen bg-background"><Topbar title="Profil" /><div className="p-6">Yuklanmoqda...</div></div>;
@@ -254,4 +254,5 @@ function StatItem({ label, value }) {
     </div>
   );
 }
+
 
