@@ -8,14 +8,10 @@ export default function WardStatusCard({ ward, onClick }) {
   const hasUrgent = ward.patients.some(p => p.daysLeft === 0);
   const hasWarning = ward.patients.some(p => p.daysLeft === 1);
 
-  const getImageUrl = (path) => {
-    if (!path) return null;
-    if (path.startsWith('http')) return path;
-    const hostname = window.location.hostname || 'localhost';
-    const rootUrl = `http://${hostname}:9000`;
-    const cleanPath = path.toString().replace(/\\/g, '/');
-    const formattedPath = cleanPath.startsWith('/') ? cleanPath : '/' + cleanPath;
-    return `${rootUrl}${formattedPath}`.replace(/([^:]\/)\/+/g, "$1");
+  const getImageUrl = (imagePath) => {
+    if (!imagePath) return null;
+    if (imagePath.startsWith('http')) return imagePath;
+    return `https://ranomed-2.onrender.com${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
   };
 
   const imgUrl = getImageUrl(ward.image);

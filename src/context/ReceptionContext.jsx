@@ -3,7 +3,7 @@ import api from '../api';
 import { toast } from 'sonner';
 import { io } from 'socket.io-client';
 
-const socket = io(import.meta.env.VITE_API_BASE_URL?.replace('/api', '') || 'http://localhost:9000');
+const socket = io('https://ranomed-2.onrender.com');
 
 const ReceptionContext = createContext();
 

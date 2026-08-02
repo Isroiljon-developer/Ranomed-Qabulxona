@@ -101,7 +101,7 @@ export default function WardDetailModal({ ward, onClose }) {
             <div className="w-24 h-24 rounded-xl overflow-hidden bg-muted flex-shrink-0">
               {ward.image ? (
                 <img
-                  src={ward.image.startsWith('http') ? ward.image : `http://${window.location.hostname || 'localhost'}:9000${ward.image.startsWith('/') ? '' : '/'}${ward.image}`}
+                  src={ward.image.startsWith('http') ? ward.image : `https://ranomed-2.onrender.com${ward.image.startsWith('/') ? '' : '/'}${ward.image}`}
                   alt={ward.roomNumber}
                   className="w-full h-full object-cover"
                 />

@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { User as UserIcon, Building2, Clock, LogOut, Edit2, Save, X, Phone, Mail, Calendar } from 'lucide-react';
 import Topbar from '../layout/Topbar';
 import ConfirmDialog from '../components/ConfirmDialog';
@@ -84,7 +84,7 @@ export default function Profile() {
             <div className="absolute -bottom-12 left-6">
               <div className="w-24 h-24 rounded-full bg-card border-4 border-card flex items-center justify-center shadow-lg overflow-hidden">
                 {user.photo ? (
-                  <img src={`http://localhost:9000/uploads/${user.photo}`} alt={user.name} className="w-full h-full object-cover" />
+                  <img src={`https://ranomed-2.onrender.com/uploads/${user.photo}`} alt={user.name} className="w-full h-full object-cover" />
                 ) : (
                   <span className="text-3xl font-bold text-primary">{user.name[0]}</span>
                 )}
